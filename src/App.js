@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import { useState, useRef } from "react";
 import "./App.css";
 import GameBoard from "./GameBoard";
