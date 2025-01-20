@@ -1,9 +1,11 @@
 h1 {
   text-align: center;
+  margin-top: 500px;
 }
 
 form {
   margin-left: 100px;
+  margin-bottom: 10px;
 }
 
 button {
@@ -19,7 +21,6 @@ button {
   background-color: rgb(204, 198, 198);
 }
 
-.button-1 {
-  height: 20px;
-  width: 50px;
+.button-2 {
+  margin-left: 10px;
 }

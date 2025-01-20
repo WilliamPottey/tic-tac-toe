@@ -108,7 +108,7 @@ function GameBoard(props) {
     <>
       <div>
         <span className="playerTurn">
-          {winner.length < 3 && winner[0] != "tie" ? (
+          {winner.length < 3 && winner[0] !== "tie" ? (
             <span>
               it is {<span style={{ fontWeight: "bold" }}>{Turn.name}'s </span>}
               turn!
@@ -120,7 +120,7 @@ function GameBoard(props) {
           )}
         </span>
         <span className="playerTurn">
-          {winner.length < 3 && winner[0] != "tie" ? (
+          {winner.length < 3 && winner[0] !== "tie" ? (
             <span>
               You are player{" "}
               {<span style={{ fontWeight: "bold" }}>{Turn.character}</span>}
@@ -154,6 +154,7 @@ function GameBoard(props) {
           </div>
         ))}
       </div>
+      <br />
     </>
   );
 }

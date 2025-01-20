@@ -9,6 +9,9 @@ function App() {
   const [Start, setStart] = useState(false);
 
   const startGame = () => {
+    if (Player1.length === 0 || Player2.length === 0) {
+      return;
+    }
     setStart(true);
   };
 
@@ -22,7 +25,7 @@ function App() {
     <>
       <h1> Tic-Tac-Toe</h1>
       <form>
-        <label>Player 1 </label>
+        <label>Player 1 </label>{" "}
         <input
           className={Start === true ? "inputGray" : null}
           type="text"
@@ -31,7 +34,7 @@ function App() {
           readOnly={Start === true ? true : false}
         ></input>{" "}
         <br />
-        <label>Player 2 </label>
+        <label>Player 2 </label>{" "}
         <input
           className={Start === true ? "inputGray" : null}
           type="text"
@@ -45,8 +48,10 @@ function App() {
         {" "}
         Start{" "}
       </button>
-      <button onClick={() => resetGame()}> Reset </button>
-      <br />
+      <button className="button-2" onClick={() => resetGame()}>
+        {" "}
+        Reset{" "}
+      </button>
       {Start === true ? (
         <GameBoard
           name1={{ name: Player1, character: "X" }}
