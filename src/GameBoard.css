@@ -1,0 +1,55 @@
+.playerTurn {
+  display: table;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: 125px 125px 125px;
+  gap: 0px;
+  place-self: center;
+}
+
+.box {
+  height: 125px;
+  width: 125px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.button-no-margin {
+  margin-top: 0;
+  margin-bottom: -5;
+}
+
+.character-X {
+  color: red;
+  font-size: 85px;
+}
+
+.character-O {
+  color: rgb(51, 163, 201);
+  font-size: 85px;
+}
+
+.box-hover-X {
+  &:hover {
+    box-shadow: 0px 0 20px red; /* outer right cyan */
+  }
+}
+
+.box-hover-O {
+  &:hover {
+    box-shadow: 0px 0 20px #0ff; /* outer right cyan */
+  }
+}
+
+.box-winner {
+  background-color: yellow;
+}
+
+.game-over-text {
+  font-size: large;
+  font-weight: bold;
+}
